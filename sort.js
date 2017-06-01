@@ -8,19 +8,18 @@ var students = [
 students.sort(function(a,b) {
   var nameA = a.name;
   var nameB = b.name;
+  var ageA = a.age;
+  var ageB = b.age;
   if (nameA < nameB) {
     return -1; 
-  }
-  if (nameA > nameB) {
+  } if (nameA > nameB) {
     return 1;
+  } else if (nameA == nameB) {
+    if (ageA < ageB) {
+      return 1;
+    }
   }
-return 0;
-})
+  return 0;
+});
 
-  // for (var i = 0; i < students.length; i++) {
-  //   if (students[i].name !== students[i].name) {
-  //     students[i].name.sort()
-  //   } else {
-  //     students[i].age.sort()
-  //   }
-  // }
+console.log(students)
